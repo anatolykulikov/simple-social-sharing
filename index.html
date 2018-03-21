@@ -1,0 +1,48 @@
+
+<!-- This is the simplest solution for sharing social networks and instant messengers. It does not use databases and does not display the number of reposts made.
+
+For work you need to specify several variables:
+
+$Link - permanent address of the page
+$Title - title of the page / article
+$Description - short description of the page
+$Image - the path to the image (main illustration) of this page
+
+-->
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=$Title&p%5Bsummary%5D=$Description&p%5Burl%5D=$Link&p%5Bimages%5D%5B0%5D=$Image" target="_blank" rel="nofollow">Share on Facebook</a>
+
+<!-- Telegram -->
+<a href="https://telegram.me/share/url?url=$Link&text=$Title" target="_blank" rel="nofollow">Share on Telegram</a>
+
+<!-- vk.com -->
+<a href="http://vk.com/share.php?url=$Link&title=$Title&description=$Description&image=$Image&noparse=true" target="_blank" rel="nofollow">Share on VK</a>
+
+<!-- Twitter -->
+<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffiddle.jshell.net%2F_display%2F&text=$Title&url=$Link" target="_blank" rel="nofollow">Share on Twitter</a>
+
+<!-- Mail.ru -->
+<a href="http://connect.mail.ru/share?url=$Link&title=$Title&description=$Description&imageurl=$Image" target="_blank" rel="nofollow">Share on Mail.ru</a>
+
+<!-- ok.ru -->
+<a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=$Description&st._surl=$Link" target="_blank" rel="nofollow">Share on Odnoklassniki</a>
+
+
+<!-- Do not forget this code -->
+<script type="text/javascript">
+    function setOnclick(a) {
+        a.setAttribute("onclick", "popupWin = window.open(this.href,'contacts','toolbar=0,status=0,width=626,height=436'); popupWin.focus(); return false");
+    }
+    function externalLinks() {
+        var links = document.getElementsByTagName("a");
+        for (i = 0; i < links.length; i++) {
+            if (links[i].getAttribute("href") && links[i].getAttribute("rel") == "nofollow") {
+                setOnclick(links[i])
+            }
+        }
+    }
+    window.onload = externalLinks;
+</script>
+
+<!-- or this one - compressed form -->
+<script type="text/javascript">function setOnclick(t){t.setAttribute("onclick","popupWin = window.open(this.href,'contacts','toolbar=0,status=0,width=626,height=436'); popupWin.focus(); return false")}function externalLinks(){var t=document.getElementsByTagName("a");for(i=0;i<t.length;i++)t[i].getAttribute("href")&&"nofollow"==t[i].getAttribute("rel")&&setOnclick(t[i])}window.onload=externalLinks;</script>
