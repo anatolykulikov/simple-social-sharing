@@ -3,8 +3,11 @@ This is the simplest solution for sharing social networks and instant messengers
 For work you need to specify several variables:
 
 `$Link` - permanent address of the page
+
 `$Title` - title of the page / article
+
 `$Description` - short description of the page
+
 `$Image` - the path to the image (main illustration) of this page
 
 
