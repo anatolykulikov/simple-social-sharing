@@ -2,51 +2,51 @@ This is the simplest solution for sharing social networks and instant messengers
 
 For work you need to specify several variables:
 
-$Link - permanent address of the page
-$Title - title of the page / article
-$Description - short description of the page
-$Image - the path to the image (main illustration) of this page
+`$Link` - permanent address of the page
+`$Title` - title of the page / article
+`$Description` - short description of the page
+`$Image` - the path to the image (main illustration) of this page
 
 
-##Facebook
+## Facebook
 ```
 <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=$Title&p%5Bsummary%5D=$Description&p%5Burl%5D=$Link&p%5Bimages%5D%5B0%5D=$Image" target="_blank" rel="nofollow">Share on Facebook</a>
 ```
 
-##Telegram
+## Telegram
 ```
 <a href="https://telegram.me/share/url?url=$Link&text=$Title" target="_blank" rel="nofollow">Share on Telegram</a>
 ```
 
-##vk.com
+## vk.com
 ```
 <a href="http://vk.com/share.php?url=$Link&title=$Title&description=$Description&image=$Image&noparse=true" target="_blank" rel="nofollow">Share on VK</a>
 ```
 
-##Twitter
+## Twitter
 ```
 <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffiddle.jshell.net%2F_display%2F&text=$Title&url=$Link" target="_blank" rel="nofollow">Share on Twitter</a>
 ```
 
-##Mail.ru
+## Mail.ru
 ```
 <a href="http://connect.mail.ru/share?url=$Link&title=$Title&description=$Description&imageurl=$Image" target="_blank" rel="nofollow">Share on Mail.ru</a>
 ```
 
-##ok.ru
+## ok.ru
 ```
 <a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=$Description&st._surl=$Link" target="_blank" rel="nofollow">Share on Odnoklassniki</a>
 ```
 
-##WhatsApp (only on smartphones)
+## WhatsApp (only on smartphones)
 <a href="whatsapp://send?text=<?php echo urlencode('$Title'); ?>" data-action="share/whatsapp/share">Share on WhatsApp</a>
 
-##Viber
+## Viber
 ```
 <a href="viber://forward?text=$Title">Share on Viber</a>
 ```
 
-##Skype
+## Skype
 ```
 <a href="#" class='skype-share' data-href='$Link' data-lang='' data-text='$Title'>Share on Skype</a>
 ```
@@ -58,7 +58,7 @@ This javascript code is required for the operation of sharing Skype button - wit
 ```
 
 
-#Also
+# Also
 
 This code is designed to create Windows when you make sharing on social networks like Facebook and VK or messengers like Telegram. Without this code, the sharing confirmation page will open in a new tab.
 
