@@ -42,7 +42,9 @@ For work you need to specify several variables:
 ```
 
 ## WhatsApp (only on smartphones)
+```
 <a href="whatsapp://send?text=<?php echo urlencode('$Title'); ?>" data-action="share/whatsapp/share">Share on WhatsApp</a>
+```
 
 ## Viber
 ```
